@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.Random;
 
-public class seventh extends JPanel implements ActionListener {
+public class Main extends JPanel implements ActionListener {
     final int TILE_SIZE = 20;
     final int WIDTH = 600;
     final int HEIGHT = 600;
@@ -23,7 +23,7 @@ public class seventh extends JPanel implements ActionListener {
     JFrame frame;
     JLabel scoreLabel;
 
-    public seventh(JFrame frame, JLabel scoreLabel) {
+    public Main(JFrame frame, JLabel scoreLabel) {
         this.frame = frame;
         this.scoreLabel = scoreLabel;
         this.setPreferredSize(new Dimension(WIDTH,HEIGHT));
@@ -142,7 +142,7 @@ public class seventh extends JPanel implements ActionListener {
         scoreLabel.setFont(new Font("Arial", Font.BOLD, 20));
         frame.add(scoreLabel, BorderLayout.NORTH);
         
-        seventh game = new seventh(frame, scoreLabel);
+        Main game = new Main(frame, scoreLabel);
         frame.add(game);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
